@@ -38,6 +38,7 @@ class Contact extends Component {
     handleSubmit(values) {
         console.log('Current state is: ' + JSON.stringify(values));
         alert('Current state is: ' + JSON.stringify(values));
+        this.props.postFeedback(values);
         this.props.resetFeedbackForm();
     }
 
@@ -52,7 +53,7 @@ class Contact extends Component {
                     <Breadcrumb>
                             <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
                             <BreadcrumbItem active>Contact Us</BreadcrumbItem>
-                        </Breadcrumb>
+                    </Breadcrumb>
                         <h2>Contact Us</h2>
                         <hr />
                     </div>
